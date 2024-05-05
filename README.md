@@ -17,7 +17,6 @@ Business
 
 The basic idea of our business application is to use the MSI to implement a maximal risk diversification in a stock portfolio. That is, we want to identify each stock with a qubit, and connect that qubit with others respresenting stocks with similar risks, where . The underlying challenge is finding a meaningful geometry and 2dimensional model to simulate how the risk of individual stocks connects. 
 The first issue that arises in a large scale implementation of this idea is that there are obviously far far more stocks than just a few hundred, so a creative solution would be needed to implement this near-term. 
-Our solution to this problem comes in the form of a minimal cut algorithm. Considering a huge lattice containing qubits of the order $n^{2}$, we want to divide the lattice into $n$ many subgrids containing $n$ qubits, and solve the MSI problem for each of the subgrids. However, there is an issue with how we divide the individual lattices to ensure that when we put them back together, we have a negligible error on the edges between
-
-The fundamental problem is to find a meaningful geometry 
+Our solution to this problem comes in the form of a minimal cut algorithm. Considering a huge lattice containing qubits of the order $n^{2}$, we want to divide the lattice into $n$ many subgrids containing $n$ qubits, and solve the MSI problem for each of the subgrids. However, there is an issue with how we divide the individual lattices to ensure that when we put them back together, we have a negligible error on the edges between the different individual squares. To do this, we had the idea of using a minimal cut problem using certain constraints to divide the lattice in such a way that on the edges, as few qubits as possible are connected.
+As a proof of concept we then tried using a basic model including a geographic distinction to model how stocks are connected on a square lattice.
  
